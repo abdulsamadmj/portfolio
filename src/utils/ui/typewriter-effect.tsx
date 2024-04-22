@@ -1,5 +1,3 @@
-"use client";
-
 import { cn } from "../cn";
 import { motion, stagger, useAnimate, useInView } from "framer-motion";
 import { useEffect } from "react";

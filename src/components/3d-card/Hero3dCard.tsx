@@ -21,14 +21,14 @@ export function HeroThreeDCard() {
               Abdul Samad M J
             </CardItem>
             <CardItem
-              as="p"
+              as="div"
               translateZ="60"
               className="text-xl max-w-sm mt-2 text-neutral-300"
             >
               <TypewriterHero />
             </CardItem>
             <CardItem
-              as="p"
+              as="div"
               translateZ="50"
               className="text-sm max-w-sm mt-2 text-gray-500 py-2"
             >
