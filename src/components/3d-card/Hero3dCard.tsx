@@ -1,5 +1,6 @@
 import { CardBody, CardContainer, CardItem } from "../../utils/ui/3d-card";
 import image from "../../assets/images/dp.jpg";
+import { TypewriterHero } from "../typewriter/TypewriterHero";
 
 export function HeroThreeDCard() {
   return (
@@ -24,7 +25,7 @@ export function HeroThreeDCard() {
               translateZ="60"
               className="text-xl max-w-sm mt-2 text-neutral-300"
             >
-              MERN Stack Developer
+              <TypewriterHero />
             </CardItem>
             <CardItem
               as="p"
