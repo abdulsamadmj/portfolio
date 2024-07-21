@@ -3,9 +3,10 @@ import ReactDOM from "react-dom/client";
 import App from "./App.tsx";
 import "./index.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import About from "./pages/About.tsx";
 import Contact from "./pages/Contact.tsx";
 import { Navbar } from "./components/navbar/navbar.tsx";
+import Portfolio from "./pages/Portfolio.tsx";
+import Projects from "./pages/Projects.tsx";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
@@ -16,8 +17,9 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<App />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
+            <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/connect" element={<Contact />} />
           </Routes>
           <Navbar />
         </BrowserRouter>

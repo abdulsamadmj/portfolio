@@ -1,8 +1,9 @@
 import { CardBody, CardContainer, CardItem } from "../../utils/ui/3d-card";
 import image from "../../assets/images/dp.jpg";
-import { TypewriterHero } from "../typewriter/TypewriterHero";
+import { FlipWords } from "../../utils/ui/flip-words";
 
 export function HeroThreeDCard() {
+  const words = ["Mern Stack Developer", "Co-founder, DJX", "IT Engineer"];
   return (
     <CardContainer className="inter-var">
       <CardBody className="relative group/card hover:shadow-2xl hover:shadow-emerald-500/[0.1] bg-black border-white/[0.2] h-auto rounded-xl p-6 border">
@@ -25,7 +26,11 @@ export function HeroThreeDCard() {
               translateZ="60"
               className="text-xl max-w-sm mt-2 text-neutral-300"
             >
-              <TypewriterHero />
+              <div className="flex items-center gap-1">
+                <div className="pb-[0.3rem] text-xl text-white">
+                  <FlipWords words={words} />
+                </div>
+              </div>
             </CardItem>
             <CardItem
               as="div"
