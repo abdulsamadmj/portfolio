@@ -34,6 +34,23 @@ export default {
         { values: flattenColorPalette(theme("backgroundColor")), type: "color" }
       );
     },
+    function({ addUtilities }) {
+      addUtilities({
+        '.scrollbar-none::-webkit-scrollbar': {
+          display: 'none',
+        },
+        '.scrollbar-thin::-webkit-scrollbar': {
+          width: '8px',
+        },
+        '.scrollbar-thin::-webkit-scrollbar-thumb': {
+          backgroundColor: 'rgba(255, 255, 255, 0.6)',
+          borderRadius: '9999px',
+        },
+        '.scrollbar-thin::-webkit-scrollbar-track': {
+          backgroundColor: 'transparent',
+        },
+      }, ['responsive'])
+    }
   ],
 };
 
