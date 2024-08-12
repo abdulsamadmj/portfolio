@@ -3,6 +3,9 @@ import fmsImage from "../assets/ss/fms.png";
 import ttImage from "../assets/ss/tt.png";
 import lvImage from "../assets/ss/lv.png";
 import xoImage from "../assets/ss/xo.png";
+import alImage from "../assets/ss/al.png";
+import prImage from "../assets/ss/pr.png";
+import safImage from "../assets/ss/saf.png";
 
 import {
   IconSchool,
@@ -12,6 +15,10 @@ import {
   IconHearts,
   IconDeviceGamepad,
   IconDeviceIpadHorizontalQuestion,
+  IconBallpen,
+  IconStethoscope,
+  IconBuildingSkyscraper,
+  IconBrandFigma,
 } from "@tabler/icons-react";
 import { BentoGridItemProps } from "../utils/ui/bento-grid";
 
@@ -21,7 +28,7 @@ interface ProjectSkeletonProps {
 
 function Projects() {
   const Skeleton = ({ image }: ProjectSkeletonProps) => (
-    <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl text-white bg-gradient-to-br from-neutral-900 to-neutral-800">
+    <div className="max-sm:hidden flex flex-1 w-full h-full min-h-[6rem] rounded-xl text-white bg-gradient-to-br from-neutral-900 to-neutral-800">
       {image ? <img className="rounded-xl" src={image} /> : null}
     </div>
   );
@@ -34,19 +41,32 @@ function Projects() {
       header: <Skeleton image={fmsImage} />,
       icon: <IconSchool className="h-4 w-4 text-neutral-500" />,
       endIcons: (
-        <a
-          href="https://docs.google.com/document/d/1spmfMg1FMQHuuhR9Eg9rZo3UyUI0_pj4OXZj1mNnARw/edit?usp=sharing"
-          target="_blank"
-          className="text-neutral-500 text-xs font-normal flex gap-1 hover:underline"
-        >
-          Test Server Credentials
-          <IconExternalLink className="h-4 w-4 text-neutral-500" />
-        </a>
+        <div className="text-neutral-500 text-xs font-normal flex gap-1 hover:underline">
+          <a
+            href="https://www.figma.com/design/godndSMrji7IfrXh0DEsxE/FMS?node-id=5259-88588&t=osX1ht9F1FcrqFOj-1"
+            target="_blank"
+          >
+            <IconBrandFigma className="h-4 w-4 text-neutral-500" />
+          </a>
+          <a
+            href="https://docs.google.com/document/d/1spmfMg1FMQHuuhR9Eg9rZo3UyUI0_pj4OXZj1mNnARw/edit?usp=sharing"
+            target="_blank"
+            className="text-neutral-500 text-xs font-normal flex gap-1 hover:underline"
+          >
+            Test Server Credentials
+            <IconExternalLink className="h-4 w-4 text-neutral-500" />
+          </a>
+        </div>
       ),
     },
     {
-      title: "Steel Weight Calculator",
-      description: "AI powered (gpt-4o) steel equipments weight calculator",
+      title: "Steel Weight Calculator (Beta)",
+      description: (
+        <p className=" text-xs font-normal">
+          AI powered steel equipments weight calculator
+          <div className="bg-yellow-800 rounded-xl w-fit px-2">In Progress</div>
+        </p>
+      ),
       header: <Skeleton />,
       icon: <IconCalculator className="h-4 w-4 text-neutral-500" />,
       endIcons: (
@@ -79,7 +99,7 @@ function Projects() {
     },
   ];
 
-  const hobbyProjects: BentoGridItemProps[] = [
+  const communityProjects: BentoGridItemProps[] = [
     {
       title: "Loverse",
       description:
@@ -134,11 +154,69 @@ function Projects() {
         </p>
       ),
       header: <Skeleton />,
-      icon: <IconDeviceIpadHorizontalQuestion className="h-4 w-4 text-neutral-500" />,
+      icon: (
+        <IconDeviceIpadHorizontalQuestion className="h-4 w-4 text-neutral-500" />
+      ),
       endIcons: (
         <div className="text-neutral-500 text-xs font-normal flex gap-1 hover:underline">
+          <a
+            href="https://www.figma.com/design/jl3uniUJAEZNfkpcIhgBp3/Wireframe?node-id=0-1&t=Vo8WDiSG1c0oLvK0-1"
+            target="_blank"
+          >
+            <IconBrandFigma className="h-4 w-4 text-neutral-500" />
+          </a>
           <a href="https://github.com/djx-community/encuesta" target="_blank">
             <IconBrandGithub className="h-4 w-4 text-neutral-500" />
+          </a>
+        </div>
+      ),
+    },
+  ];
+
+  const freelanceProjects: BentoGridItemProps[] = [
+    {
+      title: "PRAZI Website",
+      description:
+        "Official Website of Prazi Medical & Surgical Devices Manufacturing LLC, Dubai, UAE",
+      header: <Skeleton image={prImage} />,
+      icon: <IconStethoscope className="h-4 w-4 text-neutral-500" />,
+      endIcons: (
+        <div className="text-neutral-500 text-xs font-normal flex gap-1 hover:underline">
+          <a href="https://prazi.ae/" target="_blank">
+            <IconExternalLink className="h-4 w-4 text-neutral-500" />
+          </a>
+        </div>
+      ),
+    },
+    {
+      title: "Safin Aluminium & Glass, Website",
+      description: "Official Website of Safin Aluminium & Glass, Sharjah, UAE",
+      header: <Skeleton image={safImage} />,
+      icon: <IconBuildingSkyscraper className="h-4 w-4 text-neutral-500" />,
+      endIcons: (
+        <div className="text-neutral-500 text-xs font-normal flex gap-1 hover:underline">
+          <a
+            href="https://www.figma.com/design/AJy84cBELyXfk417IxXbeF/Safin-glass-website?node-id=0-1&t=kTLqgOrVWlnGOBgo-1"
+            target="_blank"
+          >
+            <IconBrandFigma className="h-4 w-4 text-neutral-500" />
+          </a>
+          <a href="https://safinglass.com/" target="_blank">
+            <IconExternalLink className="h-4 w-4 text-neutral-500" />
+          </a>
+        </div>
+      ),
+    },
+    {
+      title: "Alumni WMOC Official Website",
+      description:
+        "Official Website of Alumni Association WMO Arts & Science College, Muttil, Wayanad",
+      header: <Skeleton image={alImage} />,
+      icon: <IconBallpen className="h-4 w-4 text-neutral-500" />,
+      endIcons: (
+        <div className="text-neutral-500 text-xs font-normal flex gap-1 hover:underline">
+          <a href="http://alumni.wmocollege.ac.in/" target="_blank">
+            <IconExternalLink className="h-4 w-4 text-neutral-500" />
           </a>
         </div>
       ),
@@ -155,8 +233,9 @@ function Projects() {
       {/* Core Projects */}
       <ProjectGrid items={coreProjects} title="Core Projects" />
       {/* Community Projects */}
-      <ProjectGrid items={hobbyProjects} title="Community Projects" />
+      <ProjectGrid items={communityProjects} title="Community Projects" />
       {/* Freelance Projects */}
+      <ProjectGrid items={freelanceProjects} title="Freelance Projects" />
     </div>
   );
 }
