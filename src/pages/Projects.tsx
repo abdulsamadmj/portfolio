@@ -6,10 +6,13 @@ import xoImage from "../assets/ss/xo.png";
 import alImage from "../assets/ss/al.png";
 import prImage from "../assets/ss/pr.png";
 import safImage from "../assets/ss/saf.png";
+import otaImage from "../assets/ss/ota.png";
+import todoImage from "../assets/ss/todo.png";
+import nfImage from "../assets/ss/nf.png";
 
 import {
   IconSchool,
-  IconExternalLink,
+  IconWorldWww,
   IconCalculator,
   IconBrandGithub,
   IconHearts,
@@ -19,6 +22,12 @@ import {
   IconStethoscope,
   IconBuildingSkyscraper,
   IconBrandFigma,
+  IconPerfume,
+  IconPhotoScan,
+  IconShoppingCart,
+  IconListDetails,
+  IconBrandNetflix,
+  IconKey,
 } from "@tabler/icons-react";
 import { BentoGridItemProps } from "../utils/ui/bento-grid";
 
@@ -54,7 +63,7 @@ function Projects() {
             className="text-neutral-500 text-xs font-normal flex gap-1 hover:underline"
           >
             Test Server Credentials
-            <IconExternalLink className="h-4 w-4 text-neutral-500" />
+            <IconKey className="h-4 w-4 text-neutral-500" />
           </a>
         </div>
       ),
@@ -71,12 +80,11 @@ function Projects() {
       icon: <IconCalculator className="h-4 w-4 text-neutral-500" />,
       endIcons: (
         <a
-          href=""
+          href="https://calculator.metalzoneuae.com"
           target="_blank"
           className="text-neutral-500 text-xs font-normal flex gap-1 hover:underline"
         >
-          Webapp
-          <IconExternalLink className="h-4 w-4 text-neutral-500" />
+          <IconWorldWww className="h-4 w-4 text-neutral-500" />
         </a>
       ),
     },
@@ -92,7 +100,7 @@ function Projects() {
             <IconBrandGithub className="h-4 w-4 text-neutral-500" />
           </a>
           <a href="https://tail-tale.vercel.app/" target="_blank">
-            <IconExternalLink className="h-4 w-4 text-neutral-500" />
+            <IconWorldWww className="h-4 w-4 text-neutral-500" />
           </a>
         </div>
       ),
@@ -112,7 +120,7 @@ function Projects() {
             <IconBrandGithub className="h-4 w-4 text-neutral-500" />
           </a>
           <a href="https://love-verse-cl3.pages.dev/" target="_blank">
-            <IconExternalLink className="h-4 w-4 text-neutral-500" />
+            <IconWorldWww className="h-4 w-4 text-neutral-500" />
           </a>
         </div>
       ),
@@ -121,7 +129,7 @@ function Projects() {
       title: "X and O",
       description: (
         <p className="text-xs font-normal">
-          Multiplayer & Offline Tic Tac Toe Game: Webapp
+          Multiplayer & Offline Tic Tac Toe Game.
           <div className="bg-yellow-800 rounded-xl w-fit px-2">In Progress</div>
         </p>
       ),
@@ -133,7 +141,7 @@ function Projects() {
             <IconBrandGithub className="h-4 w-4 text-neutral-500" />
           </a>
           <a href="https://xando-web.vercel.app/play-offline" target="_blank">
-            <IconExternalLink className="h-4 w-4 text-neutral-500" />
+            <IconWorldWww className="h-4 w-4 text-neutral-500" />
           </a>
         </div>
       ),
@@ -142,7 +150,7 @@ function Projects() {
       title: "Encuesta",
       description: (
         <p className="text-xs font-normal">
-          Room Based Quiz Competition Mobile App: Flutter
+          Room Based Quiz Competition Mobile App.
           <div className="flex gap-1">
             <div className="bg-blue-800 rounded-xl w-fit px-2">
               Hacktoberfest 2022
@@ -183,7 +191,7 @@ function Projects() {
       endIcons: (
         <div className="text-neutral-500 text-xs font-normal flex gap-1 hover:underline">
           <a href="https://prazi.ae/" target="_blank">
-            <IconExternalLink className="h-4 w-4 text-neutral-500" />
+            <IconWorldWww className="h-4 w-4 text-neutral-500" />
           </a>
         </div>
       ),
@@ -202,7 +210,7 @@ function Projects() {
             <IconBrandFigma className="h-4 w-4 text-neutral-500" />
           </a>
           <a href="https://safinglass.com/" target="_blank">
-            <IconExternalLink className="h-4 w-4 text-neutral-500" />
+            <IconWorldWww className="h-4 w-4 text-neutral-500" />
           </a>
         </div>
       ),
@@ -216,7 +224,101 @@ function Projects() {
       endIcons: (
         <div className="text-neutral-500 text-xs font-normal flex gap-1 hover:underline">
           <a href="http://alumni.wmocollege.ac.in/" target="_blank">
-            <IconExternalLink className="h-4 w-4 text-neutral-500" />
+            <IconWorldWww className="h-4 w-4 text-neutral-500" />
+          </a>
+        </div>
+      ),
+    },
+    {
+      title: "Oud TranquilAura E-commerce Website",
+      description: (
+        <p className="text-xs font-normal">
+          E-commerce website of OTA, Dubai, UAE
+          <div className="bg-yellow-800 rounded-xl w-fit px-2">In Progress</div>
+        </p>
+      ),
+      header: <Skeleton image={otaImage} />,
+      icon: <IconPerfume className="h-4 w-4 text-neutral-500" />,
+      endIcons: (
+        <div className="text-neutral-500 text-xs font-normal flex gap-1 hover:underline">
+          <a href="http://alumni.wmocollege.ac.in/" target="_blank">
+            <IconWorldWww className="h-4 w-4 text-neutral-500" />
+          </a>
+        </div>
+      ),
+    },
+  ];
+
+  const hobbyProjects: BentoGridItemProps[] = [
+    {
+      title: "Image Recognition App: Flutter",
+      description:
+        "Simple AI Image Recognition App for finding product based on image input using TFlite",
+      header: <Skeleton />,
+      icon: <IconPhotoScan className="h-4 w-4 text-neutral-500" />,
+      endIcons: (
+        <div className="text-neutral-500 text-xs font-normal flex gap-1 hover:underline">
+          <a
+            href="https://github.com/abdulsamadmj/image-to-product"
+            target="_blank"
+          >
+            <IconBrandGithub className="h-4 w-4 text-neutral-500" />
+          </a>
+        </div>
+      ),
+    },
+    {
+      title: "E-commerce Website using NodeJS",
+      description: "E-commerce Web app made during web development series",
+      header: <Skeleton />,
+      icon: <IconShoppingCart className="h-4 w-4 text-neutral-500" />,
+      endIcons: (
+        <div className="text-neutral-500 text-xs font-normal flex gap-1 hover:underline">
+          <a
+            href="https://github.com/abdulsamadmj/e-comm-website-sample"
+            target="_blank"
+          >
+            <IconBrandGithub className="h-4 w-4 text-neutral-500" />
+          </a>
+        </div>
+      ),
+    },
+    {
+      title: "Simple ToDO App using ReactJS",
+      description:
+        "Beginner level React to-do app, done while learning ReactJS.",
+      header: <Skeleton image={todoImage} />,
+      icon: <IconListDetails className="h-4 w-4 text-neutral-500" />,
+      endIcons: (
+        <div className="text-neutral-500 text-xs font-normal flex gap-1 hover:underline">
+          <a href="https://github.com/abdulsamadmj/to-do-app" target="_blank">
+            <IconBrandGithub className="h-4 w-4 text-neutral-500" />
+          </a>
+          <a href="https://abdulsamadmj.github.io/to-do-app/" target="_blank">
+            <IconWorldWww className="h-4 w-4 text-neutral-500" />
+          </a>
+        </div>
+      ),
+    },
+    {
+      title: "Netflix UI Clone: Using ReactJS & bootstrap",
+      description:
+        "Beginner level React app netflix-clone, done while learning ReactJS",
+      header: <Skeleton image={nfImage} />,
+      icon: <IconBrandNetflix className="h-4 w-4 text-neutral-500" />,
+      endIcons: (
+        <div className="text-neutral-500 text-xs font-normal flex gap-1 hover:underline">
+          <a
+            href="https://github.com/abdulsamadmj/netflix-clone"
+            target="_blank"
+          >
+            <IconBrandGithub className="h-4 w-4 text-neutral-500" />
+          </a>
+          <a
+            href="https://abdulsamadmj.github.io/netflix-clone/"
+            target="_blank"
+          >
+            <IconWorldWww className="h-4 w-4 text-neutral-500" />
           </a>
         </div>
       ),
@@ -236,6 +338,11 @@ function Projects() {
       <ProjectGrid items={communityProjects} title="Community Projects" />
       {/* Freelance Projects */}
       <ProjectGrid items={freelanceProjects} title="Freelance Projects" />
+      {/* Hobby Projects */}
+      <ProjectGrid
+        items={hobbyProjects}
+        title="Hobby & Beginner Level Projects"
+      />
     </div>
   );
 }
