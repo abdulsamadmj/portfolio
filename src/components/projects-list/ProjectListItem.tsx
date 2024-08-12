@@ -1,16 +1,19 @@
 import { IconExternalLink } from "@tabler/icons-react";
 import React from "react";
+import { Link } from "react-router-dom";
 
 export interface ProjectListItemProps {
   title: string;
   description: string;
   link?: string;
+  external?: boolean;
 }
 
 const ProjectListItem = ({
   title,
   description,
   link,
+  external,
 }: ProjectListItemProps) => {
   const [showIcon, setShowIcon] = React.useState<boolean>(false);
   const handleMouseEnter = () => {
@@ -19,11 +22,14 @@ const ProjectListItem = ({
   const handleMouseLeave = () => {
     setShowIcon(false);
   };
+  external =
+    external == undefined || external == null ? true : external ? true : false;
   return (
-    <a
+    <Link
       className="col-span-2 md:col-span-1"
-      href={link}
-      target="_blank"
+      to={link!}
+      // eslint-disable-next-line no-extra-boolean-cast
+      target={external ? "_blank" : ""}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
@@ -32,7 +38,7 @@ const ProjectListItem = ({
         {showIcon ? <IconExternalLink className="text-gray-600" /> : null}
       </p>
       <p className="text-sm font-normal no-underline">{description}</p>
-    </a>
+    </Link>
   );
 };
 

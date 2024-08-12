@@ -26,6 +26,12 @@ function Portfolio() {
         "Official Website of Prazi Medical & Surgical Devices Manufacturing LLC, Dubai, UAE",
       link: "https://prazi.ae/",
     },
+    {
+      title: "Explore More",
+      description: "",
+      link: "/projects",
+      external: false,
+    },
   ];
   return (
     <div
