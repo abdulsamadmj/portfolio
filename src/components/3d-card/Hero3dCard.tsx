@@ -24,7 +24,7 @@ export function HeroThreeDCard() {
             <CardItem
               as="div"
               translateZ="60"
-              className="text-xl max-w-sm mt-2 text-neutral-300"
+              className="text-xl max-w-sm mt-2 text-neutral-300 w-full"
             >
               <div className="flex items-center gap-1">
                 <div className="pb-[0.3rem] text-xl text-white">

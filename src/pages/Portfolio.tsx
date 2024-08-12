@@ -1,5 +1,60 @@
+import ProjectList from "../components/projects-list/ProjectList";
+import { ProjectListItemProps } from "../components/projects-list/ProjectListItem";
+
 function Portfolio() {
-  return <div>Portfolio</div>;
+  const projects: ProjectListItemProps[] = [
+    {
+      title: "FMS - College ERP",
+      description:
+        "A custom digital platform from inception to automate office and departmental processes.",
+      link: "https://docs.google.com/document/d/1spmfMg1FMQHuuhR9Eg9rZo3UyUI0_pj4OXZj1mNnARw/edit?usp=sharing",
+    },
+    {
+      title: "Steel Weight Calculator (Beta)",
+      description: "AI powered (gpt-4o) steel equipments weight calculator",
+      link: "https://calculator.metalzoneuae.com",
+    },
+    {
+      title: "Loverse - Generate Rhyming Love Poems",
+      description:
+        "AI powered poem writing and export as image: Webapp for Valentines day",
+      link: "https://love-verse-cl3.pages.dev/",
+    },
+    {
+      title: "PRAZI Website",
+      description:
+        "Official Website of Prazi Medical & Surgical Devices Manufacturing LLC, Dubai, UAE",
+      link: "https://prazi.ae/",
+    },
+  ];
+  return (
+    <div
+      className="pt-16 pb-28 flex flex-col justify-center items-center"
+      // style={{
+      //   backdropFilter: "blur(0px)", // added to eliminate text cache of project grid showing in background
+      // }}
+    >
+      <div className="max-w-screen-md w-full p-5">
+        <h6 className="text-xl text-white pb-2 font-semibold">Hello World!</h6>
+        <p className="text-lg font-normal">
+          I'm <b>Abdul Samad</b>, a 23 y/o <b>fullstack developer</b> from India
+          (currently in <b>Dubai, UAE</b>). Primarily work within the{" "}
+          <b>JavaScript</b> ecosystem, constantly expanding my skills by
+          learning new technologies every day. <br />
+          <br /> Currently I'm working for{" "}
+          <a href="https://jkskarate.com/">
+            <b>JKS Academy</b>
+          </a>{" "}
+          and partners, building and maintaining cost efficient{" "}
+          <b>business solutions.</b>
+        </p>
+      </div>
+      <div className="max-w-screen-md w-full p-5 ">
+        <h6 className="text-lg text-white pb-2 font-semibold">Projects</h6>
+        <ProjectList projects={projects} />
+      </div>
+    </div>
+  );
 }
 
 export default Portfolio;
