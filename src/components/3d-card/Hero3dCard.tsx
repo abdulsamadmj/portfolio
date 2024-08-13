@@ -26,8 +26,8 @@ export function HeroThreeDCard() {
     const beta = event.beta;
     const gamma = event.gamma;
     if (beta !== null && gamma !== null) {
-      setTiltY((beta / 90) * 20); // Max tilt of 20 degrees
-      setTiltX((gamma / 90) * 20);
+      setTiltY((beta / 90) * 45); // Increased max tilt to 45 degrees
+      setTiltX((gamma / 90) * 45); // Increased max tilt to 45 degrees
     }
   };
 
@@ -37,8 +37,8 @@ export function HeroThreeDCard() {
     const { left, top, width, height } = card.getBoundingClientRect();
     const x = (e.clientX - left - width / 2) / (width / 2);
     const y = (e.clientY - top - height / 2) / (height / 2);
-    setTiltX(x * 10); // Max tilt of 10 degrees
-    setTiltY(y * -10);
+    setTiltX(x * 25); // Increased max tilt to 25 degrees
+    setTiltY(y * -25); // Increased max tilt to 25 degrees
   };
 
   const handleMouseLeave = () => {
@@ -52,7 +52,8 @@ export function HeroThreeDCard() {
     <div
       style={{
         transform: `perspective(1000px) rotateX(${tiltY}deg) rotateY(${tiltX}deg)`,
-        transition: hasGyro ? "transform 0.1s ease" : "transform 0.5s ease",
+        transition: hasGyro ? "transform 0.1s ease" : "transform 0.3s ease",
+        transformStyle: "preserve-3d",
       }}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
