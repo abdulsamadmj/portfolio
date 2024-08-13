@@ -58,18 +58,22 @@ function Portfolio() {
       }}
     >
       <div className="max-w-screen-md w-full p-5">
-        <h6 className="text-xl text-white pb-2 font-semibold">Hello World!</h6>
+        <h6 className="text-xl text-white pb-2 font-semibold">
+          Hello World 🙋🏻‍♂️!
+        </h6>
         <p className="text-lg font-normal">
-          I'm <b>Abdul Samad</b>, a 23 y/o <b>fullstack developer</b> from India
-          (currently in <b>Dubai, UAE</b>). Primarily work within the{" "}
-          <b>JavaScript</b> ecosystem, constantly expanding my skills by
-          learning new technologies every day. <br />
+          I'm <b className="text-neutral-300">Abdul Samad</b>, a 23 y/o{" "}
+          <b className="text-neutral-300">fullstack developer</b> from India
+          (currently in <b className="text-neutral-300">Dubai, UAE</b>).
+          Primarily work within the{" "}
+          <b className="text-neutral-300">JavaScript</b> ecosystem, constantly
+          expanding my skills by learning new technologies every day. <br />
           <br /> Currently I'm working for{" "}
           <a href="https://jkskarate.com/">
-            <b>JKS Academy</b>
+            <b className="text-neutral-300">JKS Academy</b>
           </a>{" "}
           and partners, building and maintaining cost efficient{" "}
-          <b>business solutions.</b>
+          <b className="text-neutral-300">business solutions.</b>
         </p>
       </div>
       <div className="max-w-screen-md w-full p-5 ">
