@@ -1,3 +1,5 @@
+import CareerList from "../components/career-list/CareerList";
+import { CareerListItemProps } from "../components/career-list/CareerListItem";
 import ProjectList from "../components/projects-list/ProjectList";
 import { ProjectListItemProps } from "../components/projects-list/ProjectListItem";
 
@@ -33,12 +35,27 @@ function Portfolio() {
       external: false,
     },
   ];
+
+  const jobs: CareerListItemProps[] = [
+    {
+      company: "JKS Academy",
+      date: "Oct 2023 - Present",
+      position: "IT Engineer",
+      link: "https://instagram.com/jksacademy2023/",
+    },
+    {
+      company: "DJX (Freelance)",
+      date: "Jun 2022 - Jul 2023",
+      position: "Front End Developer",
+      link: "https://instagram.com/dev_jsx/",
+    },
+  ];
   return (
     <div
-      className="pt-16 pb-28 flex flex-col justify-center items-center"
-      // style={{
-      //   backdropFilter: "blur(0px)", // added to eliminate text cache of project grid showing in background
-      // }}
+      className="pt-16 pb-28 flex flex-col justify-center items-center text-neutral-400"
+      style={{
+        backdropFilter: "blur(0px)", // added to eliminate text cache of project grid showing in background
+      }}
     >
       <div className="max-w-screen-md w-full p-5">
         <h6 className="text-xl text-white pb-2 font-semibold">Hello World!</h6>
@@ -58,6 +75,10 @@ function Portfolio() {
       <div className="max-w-screen-md w-full p-5 ">
         <h6 className="text-lg text-white pb-2 font-semibold">Projects</h6>
         <ProjectList projects={projects} />
+      </div>
+      <div className="max-w-screen-md w-full p-5 ">
+        <h6 className="text-lg text-white pb-2 font-semibold">Career</h6>
+        <CareerList list={jobs} />
       </div>
     </div>
   );

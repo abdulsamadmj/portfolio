@@ -37,7 +37,7 @@ interface ProjectSkeletonProps {
 
 function Projects() {
   const Skeleton = ({ image }: ProjectSkeletonProps) => (
-    <div className="max-sm:hidden flex flex-1 w-full h-full min-h-[6rem] rounded-xl text-white bg-gradient-to-br from-neutral-900 to-neutral-800">
+    <div className="hidden md:flex flex-1 w-full h-full min-h-[6rem] rounded-xl text-white bg-gradient-to-br from-neutral-900 to-neutral-800">
       {image ? <img className="rounded-xl" src={image} /> : null}
     </div>
   );

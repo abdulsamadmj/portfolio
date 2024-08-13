@@ -13,7 +13,7 @@ export interface ProjectGridProps {
 
 export function ProjectGrid({ items, title }: ProjectGridProps) {
   return (
-    <BentoGrid className="max-w-4xl mx-auto">
+    <BentoGrid className="max-w-4xl mx-auto w-full p-5">
       {title ? (
         <p className="col-span-full text-white text-xl">{title}</p>
       ) : null}
