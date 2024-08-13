@@ -1,67 +1,82 @@
-import React, { useState, useEffect } from "react";
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import React, { useState, useEffect, useRef } from "react";
 import { CardBody, CardContainer, CardItem } from "../../utils/ui/3d-card";
 import image from "../../assets/images/dp.jpg";
 import { FlipWords } from "../../utils/ui/flip-words";
 
 export function HeroThreeDCard() {
   const words = ["Mern Stack Developer", "Co-founder, DJX", "IT Engineer"];
-  const [hasGyro, setHasGyro] = useState<boolean>(false);
-  const [tiltX, setTiltX] = useState<number>(0);
-  const [tiltY, setTiltY] = useState<number>(0);
+  const [mousePosition, setMousePosition] = useState<{ x: number; y: number }>({
+    x: 0.5,
+    y: 0.5,
+  });
+  const [isGyroAvailable, setIsGyroAvailable] = useState<boolean>(false);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (window.DeviceOrientationEvent) {
-      window.addEventListener("deviceorientation", handleOrientation);
-      setHasGyro(true);
+    if (
+      window.DeviceOrientationEvent &&
+      typeof (DeviceOrientationEvent as any).requestPermission === "function"
+    ) {
+      setIsGyroAvailable(true);
+      (DeviceOrientationEvent as any)
+        .requestPermission()
+        .then((response: string) => {
+          if (response === "granted") {
+            window.addEventListener("deviceorientation", handleGyroscope);
+          }
+        })
+        .catch(console.error);
     }
 
     return () => {
-      if (hasGyro) {
-        window.removeEventListener("deviceorientation", handleOrientation);
+      if (isGyroAvailable) {
+        window.removeEventListener("deviceorientation", handleGyroscope);
       }
     };
-  }, [hasGyro]);
+  }, []);
 
-  const handleOrientation = (event: DeviceOrientationEvent) => {
-    const beta = event.beta;
-    const gamma = event.gamma;
+  const handleGyroscope = (event: DeviceOrientationEvent) => {
+    const { beta, gamma } = event;
     if (beta !== null && gamma !== null) {
-      setTiltY((beta / 90) * 45); // Increased max tilt to 45 degrees
-      setTiltX((gamma / 90) * 45); // Increased max tilt to 45 degrees
+      // Map gyroscope data to mouse position
+      const x = (gamma + 90) / 180; // Convert -90 to 90 range to 0 to 1
+      const y = (beta + 90) / 180; // Convert -90 to 90 range to 0 to 1
+      setMousePosition({ x, y });
     }
   };
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (hasGyro) return;
-    const card = e.currentTarget;
-    const { left, top, width, height } = card.getBoundingClientRect();
-    const x = (e.clientX - left - width / 2) / (width / 2);
-    const y = (e.clientY - top - height / 2) / (height / 2);
-    setTiltX(x * 25); // Increased max tilt to 25 degrees
-    setTiltY(y * -25); // Increased max tilt to 25 degrees
-  };
-
-  const handleMouseLeave = () => {
-    if (!hasGyro) {
-      setTiltX(0);
-      setTiltY(0);
-    }
+    if (isGyroAvailable) return; // Don't handle mouse events if gyro is available
+    const { clientX, clientY } = e;
+    const { left, top, width, height } =
+      containerRef.current!.getBoundingClientRect();
+    const x = (clientX - left) / width;
+    const y = (clientY - top) / height;
+    setMousePosition({ x, y });
   };
 
   return (
     <div
-      style={{
-        transform: `perspective(1000px) rotateX(${tiltY}deg) rotateY(${tiltX}deg)`,
-        transition: hasGyro ? "transform 0.1s ease" : "transform 0.3s ease",
-        transformStyle: "preserve-3d",
-      }}
+      ref={containerRef}
       onMouseMove={handleMouseMove}
-      onMouseLeave={handleMouseLeave}
+      style={{ perspective: "1000px" }}
     >
       <CardContainer className="inter-var">
         <CardBody className="relative group/card hover:shadow-2xl hover:shadow-emerald-500/[0.1] bg-black border-white/[0.2] h-auto rounded-xl p-6 border">
           <div className="flex flex-col sm:flex-row">
-            <CardItem translateZ="100" className="w-fit mt-4">
+            <CardItem
+              translateZ="100"
+              className="w-fit mt-4"
+              style={{
+                transform: `rotateX(${
+                  (mousePosition.y - 0.5) * 20
+                }deg) rotateY(${(mousePosition.x - 0.5) * 20}deg)`,
+                transition: isGyroAvailable
+                  ? "transform 0.1s ease"
+                  : "transform 0.5s ease",
+              }}
+            >
               <img
                 src={image}
                 height="1000"
