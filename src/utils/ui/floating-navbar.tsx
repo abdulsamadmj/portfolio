@@ -11,7 +11,7 @@ export const FloatingNav = ({
   navItems: {
     name: string;
     link: string;
-    icon?: JSX.Element;
+    // icon?: JSX.Element;
   }[];
   className?: string;
 }) => {
@@ -51,8 +51,8 @@ export const FloatingNav = ({
               "relative text-neutral-50 items-center flex space-x-1 hover:text-neutral-300"
             )}
           >
-            <span className="block sm:hidden">{navItem.icon}</span>
-            <span className="hidden sm:block text-sm">{navItem.name}</span>
+            <span className="block sm:hidden"></span>
+            <span className="block text-sm">{navItem.name}</span>
           </Link>
         ))}
         <Link to={'/connect'} className="border text-sm font-medium relative border-white/[0.2] text-white px-4 py-2 rounded-full hover:bg-blue-500">
