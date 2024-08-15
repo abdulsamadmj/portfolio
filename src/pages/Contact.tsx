@@ -27,14 +27,25 @@ function Contact() {
         <br />
         <p className="text-lg font-normal">
           <div className="mb-2">Although I am more active on</div>
-          <Link
-            className="bg-green-500 p-2 px-4 rounded-sm flex items-center gap-1 w-fit"
-            to={"https://wa.me/+917012559910"}
-            target="_blank"
-          >
-            <b className="text-white">WhatsApp</b>
-            <IconExternalLink className="text-white" />
-          </Link>
+          <div className="flex gap-2 items-center">
+            <Link
+              className="bg-blue-500 p-2 px-4 rounded-xl flex items-center gap-1 w-fit"
+              to={"https://wa.me/+917012559910"}
+              target="_blank"
+            >
+              <b className="text-white">LinkedIn</b>
+              <IconExternalLink className="text-white" />
+            </Link>
+            <div className="">&</div>
+            <Link
+              className="bg-green-500 p-2 px-4 rounded-xl flex items-center gap-1 w-fit"
+              to={"https://wa.me/+917012559910"}
+              target="_blank"
+            >
+              <b className="text-white">WhatsApp</b>
+              <IconExternalLink className="text-white" />
+            </Link>
+          </div>
         </p>
       </div>
     </div>
