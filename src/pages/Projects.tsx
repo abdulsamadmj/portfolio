@@ -326,12 +326,7 @@ function Projects() {
   ];
 
   return (
-    <div
-      className="pt-16 pb-28 flex flex-col gap-5"
-      style={{
-        backdropFilter: "blur(0px)", // added to eliminate text cache of project grid showing in background
-      }}
-    >
+    <div className="pt-16 pb-28 flex flex-col gap-5 backdrop-filter backdrop-blur-0">
       {/* Core Projects */}
       <ProjectGrid items={coreProjects} title="Core Projects" />
       {/* Community Projects */}

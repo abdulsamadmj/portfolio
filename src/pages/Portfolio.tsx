@@ -52,10 +52,7 @@ function Portfolio() {
   ];
   return (
     <div
-      className="pt-16 pb-28 flex flex-col justify-center items-center text-neutral-400"
-      style={{
-        backdropFilter: "blur(0px)", // added to eliminate text cache of project grid showing in background
-      }}
+      className="pt-16 pb-28 flex flex-col justify-center items-center text-neutral-400 backdrop-filter backdrop-blur-0"
     >
       <div className="max-w-screen-md w-full p-5">
         <h6 className="text-xl text-white pb-2 font-semibold">
