@@ -241,7 +241,7 @@ function Projects() {
       icon: <IconPerfume className="h-4 w-4 text-neutral-500" />,
       endIcons: (
         <div className="text-neutral-500 text-xs font-normal flex gap-1 hover:underline">
-          <a href="http://alumni.wmocollege.ac.in/" target="_blank">
+          <a href="https://oudtranquilaura.com" target="_blank">
             <IconWorldWww className="h-4 w-4 text-neutral-500" />
           </a>
         </div>
