@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "../cn";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 export const FloatingNav = ({
   navItems,
@@ -16,6 +16,7 @@ export const FloatingNav = ({
   className?: string;
 }) => {
   const [visible, setVisible] = useState(false);
+  const { pathname } = useLocation();
 
   // set visibility of floating nav true after 1 second  rendering page
   React.useEffect(() => {
@@ -48,16 +49,23 @@ export const FloatingNav = ({
             key={`link=${idx}`}
             to={navItem.link}
             className={cn(
-              "relative text-neutral-50 items-center flex space-x-1 hover:text-neutral-300"
+              "relative text-neutral-50 items-center flex space-x-1 hover:text-blue-500",
+              navItem.link === pathname ? "text-blue-500" : ""
             )}
           >
             <span className="block sm:hidden"></span>
             <span className="block text-sm">{navItem.name}</span>
           </Link>
         ))}
-        <Link to={'/connect'} className="border text-sm font-medium relative border-white/[0.2] text-white px-4 py-2 rounded-full hover:bg-blue-500">
+        <Link
+          to={"/connect"}
+          className={cn(
+            "border text-sm font-medium relative border-white/[0.2] text-white px-4 py-2 rounded-full hover:bg-blue-500",
+            pathname === "/connect" ? "bg-blue-500" : ""
+          )}
+        >
           <span>Connect</span>
-          <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent  h-px" />
+          <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent h-px" />
         </Link>
       </motion.div>
     </AnimatePresence>

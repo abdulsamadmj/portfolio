@@ -7,10 +7,10 @@ function TobNavbar() {
         samad.
         <div className="flex gap-1">
           <a href="https://github.com/abdulsamadmj" target="_blank">
-            <IconBrandGithub />
+            <IconBrandGithub className="hover:text-white" />
           </a>
           <a href="https://www.linkedin.com/in/abdul-samad-m-j-9b8ba1187/">
-            <IconBrandLinkedin />
+            <IconBrandLinkedin className="hover:text-blue-500" />
           </a>
         </div>
       </div>

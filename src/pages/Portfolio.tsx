@@ -74,7 +74,8 @@ function Portfolio() {
       content: (
         <div>
           <p className="text-neutral-200 text-xs md:text-sm font-normal mb-4">
-            CGPA: 7.45
+            CGPA: 7.45, Final Year Project: Tail-Tale (twitter in instagram UI
+            😃), NSS Magazine Coordinator
           </p>
           <CareerGrid list={careerAssetList.bca} />
         </div>

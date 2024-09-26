@@ -9,6 +9,7 @@ import safImage from "../assets/ss/saf.png";
 import otaImage from "../assets/ss/ota.png";
 import todoImage from "../assets/ss/todo.png";
 import nfImage from "../assets/ss/nf.png";
+import mzCalcImage from "../assets/ss/mz-calc.png";
 
 import {
   IconSchool,
@@ -71,12 +72,14 @@ function Projects() {
     {
       title: "Steel Weight Calculator (Beta)",
       description: (
-        <div className=" text-xs font-normal">
+        <div className="text-xs font-normal">
           AI powered steel equipments weight calculator
-          <div className="bg-yellow-800 rounded-xl w-fit px-2">In Progress</div>
+          <div className="bg-yellow-800 rounded-xl w-fit px-2 inline">
+            In Progress
+          </div>
         </div>
       ),
-      header: <Skeleton />,
+      header: <Skeleton image={mzCalcImage} />,
       icon: <IconCalculator className="h-4 w-4 text-neutral-500" />,
       endIcons: (
         <a
@@ -234,7 +237,7 @@ function Projects() {
       description: (
         <div className="text-xs font-normal">
           E-commerce website of OTA, Dubai, UAE
-          <div className="bg-yellow-800 rounded-xl w-fit px-2">In Progress</div>
+          <div className="bg-yellow-800 rounded-xl w-fit px-2 inline">In Progress</div>
         </div>
       ),
       header: <Skeleton image={otaImage} />,
