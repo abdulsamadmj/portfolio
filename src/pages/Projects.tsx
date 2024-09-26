@@ -71,10 +71,10 @@ function Projects() {
     {
       title: "Steel Weight Calculator (Beta)",
       description: (
-        <p className=" text-xs font-normal">
+        <div className=" text-xs font-normal">
           AI powered steel equipments weight calculator
           <div className="bg-yellow-800 rounded-xl w-fit px-2">In Progress</div>
-        </p>
+        </div>
       ),
       header: <Skeleton />,
       icon: <IconCalculator className="h-4 w-4 text-neutral-500" />,
@@ -128,10 +128,10 @@ function Projects() {
     {
       title: "X and O",
       description: (
-        <p className="text-xs font-normal">
+        <div className="text-xs font-normal">
           Multiplayer & Offline Tic Tac Toe Game.
           <div className="bg-yellow-800 rounded-xl w-fit px-2">In Progress</div>
-        </p>
+        </div>
       ),
       header: <Skeleton image={xoImage} />,
       icon: <IconDeviceGamepad className="h-4 w-4 text-neutral-500" />,
@@ -149,7 +149,7 @@ function Projects() {
     {
       title: "Encuesta",
       description: (
-        <p className="text-xs font-normal">
+        <div className="text-xs font-normal">
           Room Based Quiz Competition Mobile App.
           <div className="flex gap-1">
             <div className="bg-blue-800 rounded-xl w-fit px-2">
@@ -159,7 +159,7 @@ function Projects() {
               In Progress
             </div>
           </div>
-        </p>
+        </div>
       ),
       header: <Skeleton />,
       icon: (
@@ -232,10 +232,10 @@ function Projects() {
     {
       title: "Oud TranquilAura E-commerce Website",
       description: (
-        <p className="text-xs font-normal">
+        <div className="text-xs font-normal">
           E-commerce website of OTA, Dubai, UAE
           <div className="bg-yellow-800 rounded-xl w-fit px-2">In Progress</div>
-        </p>
+        </div>
       ),
       header: <Skeleton image={otaImage} />,
       icon: <IconPerfume className="h-4 w-4 text-neutral-500" />,
