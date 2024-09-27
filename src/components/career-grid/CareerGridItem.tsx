@@ -7,18 +7,20 @@ export interface CareerGridItemProps {
   } | null;
   icon?: React.ReactNode;
   image: string;
+  subtitle?: string;
 }
 
-function CareerGridItem({ link, image, icon }: CareerGridItemProps) {
+function CareerGridItem({ link, image, icon, subtitle }: CareerGridItemProps) {
   return (
     <div className="relative">
       {link && (
         <a
           href={link?.href}
           target={link?.external ? "_blank" : ""}
-          className="absolute w-full h-full rounded-lg opacity-0 hover:opacity-100 hover:bg-[rgba(0,0,0,0.5)] hover:cursor-pointer flex items-center justify-center"
+          className="absolute w-full h-full rounded-lg opacity-0 hover:opacity-100 hover:bg-[rgba(0,0,0,0.5)] hover:cursor-pointer flex flex-col items-center justify-center"
         >
           {icon ?? <IconExternalLink className="text-white" />}
+          <p className="text-xs font-normal text-white text-center">{subtitle}</p>
         </a>
       )}
       <img
