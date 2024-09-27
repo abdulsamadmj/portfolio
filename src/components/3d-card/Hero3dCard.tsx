@@ -3,7 +3,7 @@ import image from "../../assets/images/dp.jpg";
 import { FlipWords } from "../../utils/ui/flip-words";
 
 export function HeroThreeDCard() {
-  const words = ["Mern Stack Developer", "Co-founder, DJX", "BCA"];
+  const words = ["Full Stack Developer", "Co-founder, DJX"];
   return (
     <CardContainer className="inter-var">
       <CardBody className="relative group/card hover:shadow-2xl hover:shadow-emerald-500/[0.1] bg-black border-white/[0.2] h-auto rounded-xl p-6 border">
