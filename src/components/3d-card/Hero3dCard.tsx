@@ -123,7 +123,7 @@ export function HeroThreeDCard() {
                   </li>
                   <li>
                     {/* Whatsapp */}
-                    <a target="_blank" href="https://wa.me/+917012559910">
+                    <a target="_blank" href="https://wa.me/+918921236124">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="16"

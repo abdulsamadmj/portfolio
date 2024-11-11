@@ -25,7 +25,7 @@ function Contact() {
           <div className="flex gap-2 items-center">
             <Link
               className="bg-blue-500 p-2 px-4 rounded-xl flex items-center gap-1 w-fit"
-              to={"https://wa.me/+917012559910"}
+              to={"https://wa.me/+918921236124"}
               target="_blank"
             >
               <b className="text-white">LinkedIn</b>
@@ -34,7 +34,7 @@ function Contact() {
             <div className="">&</div>
             <Link
               className="bg-green-500 p-2 px-4 rounded-xl flex items-center gap-1 w-fit"
-              to={"https://wa.me/+917012559910"}
+              to={"https://wa.me/+918921236124"}
               target="_blank"
             >
               <b className="text-white">WhatsApp</b>
