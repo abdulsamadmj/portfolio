@@ -15,6 +15,7 @@ import prazi from "../assets/ss/pr.png";
 import safin from "../assets/ss/saf.png";
 import tailTale from "../assets/ss/tt.png";
 import nss from "../assets/ss/nss.png";
+import { SkillsListItemProps } from "../components/skills-list/SkillsList";
 
 export const portfolioProjectsList: ProjectListItemProps[] = [
   {
@@ -151,3 +152,110 @@ export const careerAssetList: {
     },
   ],
 };
+
+export const skillsList: SkillsListItemProps[] = [
+  {
+    name: "Javascript",
+    className: "bg-yellow-500",
+  },
+  {
+    name: "Typescript",
+    className: "bg-blue-500 text-white",
+  },
+  {
+    name: "React",
+    className: "bg-blue-500 text-white",
+  },
+  {
+    name: "Next.js",
+    className: "bg-white",
+  },
+  {
+    name: "Node.js",
+    className: "bg-green-500",
+  },
+  {
+    name: "Astro.JS",
+    className: "bg-red-500 text-white",
+  },
+  {
+    name: "Svelte",
+    className: "bg-orange-500",
+  },
+  {
+    name: "Strapi CMS",
+    className: "bg-violet-700 text-white",
+  },
+  {
+    name: "MongoDB",
+    className: "bg-green-500",
+  },
+  {
+    name: "PostgreSQL",
+    className: "bg-blue-500",
+  },
+  {
+    name: "Prisma",
+    className: "bg-white",
+  },
+  {
+    name: "Tailwind",
+    className: "bg-blue-500 text-white",
+  },
+  {
+    name: "HTML",
+    className: "bg-blue-500",
+  },
+  {
+    name: "CSS",
+    className: "bg-yellow-500",
+  },
+  {
+    name: "Python",
+    className: "bg-yellow-500 text-white",
+  },
+  {
+    name: "Git",
+    className: "bg-red-500",
+  },
+  {
+    name: "Linux",
+    className: "bg-yellow-500",
+  },
+  {
+    name: "Material UI",
+    className: "bg-blue-500",
+  },
+  {
+    name: "UI/UX",
+    className: "bg-red-500",
+  },
+  {
+    name: "Socket IO",
+    className: "bg-white",
+  },
+  {
+    name: "Google Cloud",
+    className: "bg-blue-500",
+  },
+  {
+    name: "AWS EC2",
+    className: "bg-orange-500",
+  },
+  {
+    name: "Odoo ERP",
+    className: "bg-violet-500 text-white",
+  },
+  {
+    name: "LLM Prompting",
+    className: "bg-white",
+  },
+  {
+    name: "Firebase",
+    className: "bg-orange-500",
+  },
+  {
+    name: "ChatGPT API",
+    className: "bg-white",
+  },
+];

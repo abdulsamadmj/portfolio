@@ -3,7 +3,12 @@ import ProjectList from "../components/projects-list/ProjectList";
 import { Timeline, TimelineEntry } from "../utils/ui/timeline";
 import { IconExternalLink } from "@tabler/icons-react";
 import CareerGrid from "../components/career-grid/CareerGrid";
-import { careerAssetList, portfolioProjectsList } from "../utils/Constants";
+import {
+  careerAssetList,
+  portfolioProjectsList,
+  skillsList,
+} from "../utils/Constants";
+import SkillsList from "../components/skills-list/SkillsList";
 
 function Portfolio() {
   const timelineData: TimelineEntry[] = [
@@ -121,10 +126,17 @@ function Portfolio() {
           <b className="text-neutral-300">business solutions.</b>
         </p>
       </div>
+      {/* Projects List */}
       <div className="max-w-screen-md w-full p-5 ">
         <h6 className="text-lg text-white pb-2 font-semibold">Projects</h6>
         <ProjectList projects={portfolioProjectsList} />
       </div>
+      {/* skills List */}
+      <div className="max-w-screen-md w-full p-5 ">
+        <h6 className="text-lg text-white pb-2 font-semibold">Skills</h6>
+        <SkillsList skills={skillsList} />
+      </div>
+      {/* Career Timeline */}
       <div className="max-w-screen-md w-full p-5 ">
         <h6 className="text-lg text-white pb-2 font-semibold">
           Career Timeline
