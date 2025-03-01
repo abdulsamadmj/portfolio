@@ -258,4 +258,16 @@ export const skillsList: SkillsListItemProps[] = [
     name: "ChatGPT API",
     className: "bg-white",
   },
+  {
+    name: "ERPNext",
+    className: "bg-blue-500 text-white"
+  },
+  {
+    name: "Frappe",
+    className: "bg-white",
+  },
+  {
+    name: "Tanstack: Router, Query, Table",
+    className: "bg-red-500 text-white",
+  },
 ];

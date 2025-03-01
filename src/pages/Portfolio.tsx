@@ -13,6 +13,31 @@ import SkillsList from "../components/skills-list/SkillsList";
 function Portfolio() {
   const timelineData: TimelineEntry[] = [
     {
+      title: "Software Engineer",
+      subtitle: (
+        <div>
+          <Link
+            to="https://bytsolv.com/"
+            target="_blank"
+            className="underline underline-offset-4 decoration-gray-800 hover:text-neutral-300"
+          >
+            <div className="flex items-center gap-1">
+              Bytsolv
+              <IconExternalLink className="text-gray-600" />
+            </div>
+          </Link>
+          December 2024 - Present
+        </div>
+      ),
+      content: (
+        <div>
+          <p className="text-neutral-200 text-xs md:text-sm font-normal mb-8">
+            Learning, Creating and Maintaining <a className="font-bold underline inline-flex items-start" href="https://jeem.so/">Jeem OS <IconExternalLink className="text-gray-600 inline" size={15} /></a>: An AI powered suite of business apps with a wonderful team.
+          </p>
+        </div>
+      ),
+    },
+    {
       title: "IT Engineer",
       subtitle: (
         <div>

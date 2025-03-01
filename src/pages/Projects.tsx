@@ -6,10 +6,10 @@ import xoImage from "../assets/ss/xo.png";
 import alImage from "../assets/ss/al.png";
 import prImage from "../assets/ss/pr.png";
 import safImage from "../assets/ss/saf.png";
-import otaImage from "../assets/ss/ota.png";
 import todoImage from "../assets/ss/todo.png";
 import nfImage from "../assets/ss/nf.png";
 import mzCalcImage from "../assets/ss/mz-calc.png";
+import bmvImage from "../assets/ss/bmv.png";
 
 import {
   IconSchool,
@@ -23,7 +23,6 @@ import {
   IconStethoscope,
   IconBuildingSkyscraper,
   IconBrandFigma,
-  IconPerfume,
   IconPhotoScan,
   IconShoppingCart,
   IconListDetails,
@@ -232,27 +231,28 @@ function Projects() {
         </div>
       ),
     },
+  ];
+
+  const hobbyProjects: BentoGridItemProps[] = [
     {
-      title: "Oud TranquilAura E-commerce Website",
-      description: (
-        <div className="text-xs font-normal">
-          E-commerce website of OTA, Dubai, UAE
-          <div className="bg-yellow-800 rounded-xl w-fit px-2 inline">In Progress</div>
-        </div>
-      ),
-      header: <Skeleton image={otaImage} />,
-      icon: <IconPerfume className="h-4 w-4 text-neutral-500" />,
+      title: "Be My Valentine ?",
+      description: "Ask out your crush on Valentine's Day: They can't say no!",
+      header: <Skeleton image={bmvImage} />,
+      icon: <IconHearts className="h-4 w-4 text-neutral-500" />,
       endIcons: (
         <div className="text-neutral-500 text-xs font-normal flex gap-1 hover:underline">
-          <a href="https://oudtranquilaura.com" target="_blank">
+          <a
+            href="https://github.com/abdulsamadmj/bemyvalentine"
+            target="_blank"
+          >
+            <IconBrandGithub className="h-4 w-4 text-neutral-500" />
+          </a>
+          <a href="https://bemyvalentine-delta.vercel.app/" target="_blank">
             <IconWorldWww className="h-4 w-4 text-neutral-500" />
           </a>
         </div>
       ),
     },
-  ];
-
-  const hobbyProjects: BentoGridItemProps[] = [
     {
       title: "Image Recognition App: Flutter",
       description:
