@@ -139,15 +139,14 @@ function Portfolio() {
         <p className="text-lg font-normal">
           I'm <b className="text-neutral-300">Abdul Samad</b>, a 23 y/o{" "}
           <b className="text-neutral-300">fullstack developer</b> from India
-          (currently in <b className="text-neutral-300">Dubai, UAE</b>).
+          (currently in <b className="text-neutral-300">Kochi</b>).
           Primarily work within the{" "}
           <b className="text-neutral-300">JavaScript</b> ecosystem, constantly
           expanding my skills by learning new technologies every day. <br />
           <br /> Currently I'm working for{" "}
-          <a href="https://jkskarate.com/">
-            <b className="text-neutral-300">JKS Academy</b>
-          </a>{" "}
-          and partners, building and maintaining cost efficient{" "}
+          <a href="https://bytsolv.com/">
+            <b className="text-neutral-300">Bytsolv</b>
+          </a>{" "} building and maintaining cost efficient{" "}
           <b className="text-neutral-300">business solutions.</b>
         </p>
       </div>
