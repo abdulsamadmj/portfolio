@@ -146,7 +146,7 @@ function Portfolio() {
           <br /> Currently I'm working for{" "}
           <a href="https://bytsolv.com/">
             <b className="text-neutral-300">Bytsolv</b>
-          </a>{" "} building and maintaining cost efficient{" "}
+          </a>{" "} building and maintaining efficient{" "}
           <b className="text-neutral-300">business solutions.</b>
         </p>
       </div>

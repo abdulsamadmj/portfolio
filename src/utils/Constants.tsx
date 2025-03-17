@@ -19,6 +19,12 @@ import { SkillsListItemProps } from "../components/skills-list/SkillsList";
 
 export const portfolioProjectsList: ProjectListItemProps[] = [
   {
+    title: "ചോറുള്ളപള്ളി.in",
+    description:
+      "Find Masjids/Mahals that provide Iftar",
+    link: "https://chorullapalli.in/",
+  },
+  {
     title: "FMS - College ERP",
     description:
       "A custom digital platform from inception to automate office and departmental processes.",
@@ -34,12 +40,6 @@ export const portfolioProjectsList: ProjectListItemProps[] = [
     description:
       "AI powered poem writing and export as image: Webapp for Valentines day",
     link: "https://love-verse-cl3.pages.dev/",
-  },
-  {
-    title: "PRAZI Website",
-    description:
-      "Official Website of Prazi Medical & Surgical Devices Manufacturing LLC, Dubai, UAE",
-    link: "https://prazi.ae/",
   },
   {
     title: "Explore More",
