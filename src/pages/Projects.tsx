@@ -10,6 +10,7 @@ import todoImage from "../assets/ss/todo.png";
 import nfImage from "../assets/ss/nf.png";
 import mzCalcImage from "../assets/ss/mz-calc.png";
 import bmvImage from "../assets/ss/bmv.png";
+import chImage from "../assets/ss/ch.jpg"
 
 import {
   IconSchool,
@@ -39,7 +40,7 @@ interface ProjectSkeletonProps {
 function Projects() {
   const Skeleton = ({ image }: ProjectSkeletonProps) => (
     <div className="hidden md:flex flex-1 w-full h-full min-h-[6rem] rounded-xl text-white bg-gradient-to-br from-neutral-900 to-neutral-800">
-      {image ? <img className="rounded-xl" src={image} /> : null}
+      {image ? <img className="rounded-xl object-cover" src={image} /> : null}
     </div>
   );
 
@@ -111,6 +112,19 @@ function Projects() {
   ];
 
   const communityProjects: BentoGridItemProps[] = [
+    {
+      title: "ചോറുള്ളപള്ളി.in",
+      description: "Find Masjids/Mahals that provide Iftar",
+      header: <Skeleton image={chImage}/>,
+      icon: <IconBuildingMosque className="h-4 w-4 text-neutral-500" />,
+      endIcons: (
+        <div className="text-neutral-500 text-xs font-normal flex gap-1 hover:underline">
+          <a href="https://chorullapalli.in/" target="_blank">
+            <IconWorldWww className="h-4 w-4 text-neutral-500" />
+          </a>
+        </div>
+      ),
+    },
     {
       title: "Loverse",
       description:
@@ -235,19 +249,6 @@ function Projects() {
   ];
 
   const hobbyProjects: BentoGridItemProps[] = [
-    {
-      title: "ചോറുള്ളപള്ളി.in",
-      description: "Find Masjids/Mahals that provide Iftar",
-      header: <Skeleton />,
-      icon: <IconBuildingMosque className="h-4 w-4 text-neutral-500" />,
-      endIcons: (
-        <div className="text-neutral-500 text-xs font-normal flex gap-1 hover:underline">
-          <a href="https://chorullapalli.in/" target="_blank">
-            <IconWorldWww className="h-4 w-4 text-neutral-500" />
-          </a>
-        </div>
-      ),
-    },
     {
       title: "Be My Valentine ?",
       description: "Ask out your crush on Valentine's Day: They can't say no!",
