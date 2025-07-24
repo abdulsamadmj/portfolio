@@ -89,7 +89,7 @@ export function HeroThreeDCard() {
                     {/* instagram */}
                     <a
                       target="_blank"
-                      href="https://www.instagram.com/abdul_samad_mj/"
+                      href="https://www.instagram.com/abdulsamad.mj/"
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
