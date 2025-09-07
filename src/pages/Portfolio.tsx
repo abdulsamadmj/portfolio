@@ -11,6 +11,13 @@ import {
 import SkillsList from "../components/skills-list/SkillsList";
 
 function Portfolio() {
+  const birthDate = new Date(2001, 9, 5); // 5th October 2001 (month is 0-indexed)
+  const today = new Date();
+  let years = today.getFullYear() - birthDate.getFullYear();
+  const hasHadBirthdayThisYear =
+    today.getMonth() > birthDate.getMonth() ||
+    (today.getMonth() === birthDate.getMonth() && today.getDate() >= birthDate.getDate());
+  if (!hasHadBirthdayThisYear) years -= 1;
   const timelineData: TimelineEntry[] = [
     {
       title: "Software Engineer",
@@ -137,7 +144,7 @@ function Portfolio() {
           Hello World 🙋🏻‍♂️!
         </h6>
         <p className="text-lg font-normal">
-          I'm <b className="text-neutral-300">Abdul Samad</b>, a 23 y/o{" "}
+          I'm <b className="text-neutral-300">Abdul Samad</b>, a {years} y/o{" "}
           <b className="text-neutral-300">fullstack developer</b> from India
           (currently in <b className="text-neutral-300">Kochi</b>).
           Primarily work within the{" "}
