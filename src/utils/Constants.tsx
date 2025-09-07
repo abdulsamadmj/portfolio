@@ -26,21 +26,22 @@ export const portfolioProjectsList: ProjectListItemProps[] = [
     link: "https://chorullapalli.in/",
   },
   {
-    title: "FMS - College ERP",
-    description:
-      "A custom digital platform from inception to automate office and departmental processes.",
-    link: "https://docs.google.com/document/d/1spmfMg1FMQHuuhR9Eg9rZo3UyUI0_pj4OXZj1mNnARw/edit?usp=sharing",
-  },
-  {
-    title: "Steel Weight Calculator (Beta)",
-    description: "AI powered (gpt-4o) steel equipments weight calculator",
-    link: "https://calculator.metalzoneuae.com",
-  },
-  {
     title: "LoVerse - Generate Rhyming Love Poems",
     description:
       "AI powered poem writing and export as image: Webapp for Valentines day",
     link: "https://love-verse-cl3.pages.dev/",
+  },
+  {
+    title: "Be My Valentine ?",
+    description:
+      "Ask out your crush on Valentine's Day: They can't say no!",
+    link: "https://bemyvalentine-delta.vercel.app/",
+  },
+  {
+    title: "FMS - College ERP (Discontinued)",
+    description:
+      "A custom digital platform from inception to automate office and departmental processes.",
+    link: "https://docs.google.com/document/d/1spmfMg1FMQHuuhR9Eg9rZo3UyUI0_pj4OXZj1mNnARw/edit?usp=sharing",
   },
   {
     title: "Explore More",
