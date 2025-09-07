@@ -41,6 +41,7 @@ function Portfolio() {
           <p className="text-neutral-200 text-xs md:text-sm font-normal mb-8">
             Learning, Creating and Maintaining <a className="font-bold underline inline-flex items-start" href="https://jeem.so/">Jeem OS <IconExternalLink className="text-gray-600 inline" size={15} /></a>: An AI powered suite of business apps with a wonderful team.
           </p>
+          <CareerGrid key="itEngineer" list={careerAssetList.softwareEngineer} />
         </div>
       ),
     },

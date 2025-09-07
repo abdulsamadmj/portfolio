@@ -15,6 +15,7 @@ import prazi from "../assets/ss/pr.png";
 import safin from "../assets/ss/saf.png";
 import tailTale from "../assets/ss/tt.png";
 import nss from "../assets/ss/nss.png";
+import jeem from "../assets/ss/jeem.png";
 import { SkillsListItemProps } from "../components/skills-list/SkillsList";
 
 export const portfolioProjectsList: ProjectListItemProps[] = [
@@ -49,11 +50,21 @@ export const portfolioProjectsList: ProjectListItemProps[] = [
   },
 ];
 
-type CareerKeys = "itEngineer" | "djx" | "bca" | "rpi";
+type CareerKeys = "softwareEngineer" | "itEngineer" | "djx" | "bca" | "rpi";
 
 export const careerAssetList: {
   [key in CareerKeys]: CareerGridItemProps[];
 } = {
+  softwareEngineer: [
+    {
+      link: {
+        href: "https://jeem.so/",
+        external: true,
+      },
+      subtitle: "Jeem OS",
+      image: jeem,
+    },
+  ],
   itEngineer: [
     {
       link: {
