@@ -16,7 +16,8 @@ function Portfolio() {
   let years = today.getFullYear() - birthDate.getFullYear();
   const hasHadBirthdayThisYear =
     today.getMonth() > birthDate.getMonth() ||
-    (today.getMonth() === birthDate.getMonth() && today.getDate() >= birthDate.getDate());
+    (today.getMonth() === birthDate.getMonth() &&
+      today.getDate() >= birthDate.getDate());
   if (!hasHadBirthdayThisYear) years -= 1;
   const timelineData: TimelineEntry[] = [
     {
@@ -39,9 +40,20 @@ function Portfolio() {
       content: (
         <div>
           <p className="text-neutral-200 text-xs md:text-sm font-normal mb-8">
-            Learning, Creating and Maintaining <a className="font-bold underline inline-flex items-start" href="https://jeem.so/">Jeem OS <IconExternalLink className="text-gray-600 inline" size={15} /></a>: An AI powered suite of business apps with a wonderful team.
+            Learning, Creating and Maintaining{" "}
+            <a
+              className="font-bold underline inline-flex items-start"
+              href="https://jeem.so/"
+            >
+              Jeem OS{" "}
+              <IconExternalLink className="text-gray-600 inline" size={15} />
+            </a>
+            : An AI powered suite of business apps with a wonderful team.
           </p>
-          <CareerGrid key="itEngineer" list={careerAssetList.softwareEngineer} />
+          <CareerGrid
+            key="itEngineer"
+            list={careerAssetList.softwareEngineer}
+          />
         </div>
       ),
     },
@@ -147,15 +159,17 @@ function Portfolio() {
         <p className="text-lg font-normal">
           I'm <b className="text-neutral-300">Abdul Samad</b>, a {years} y/o{" "}
           <b className="text-neutral-300">fullstack developer</b> from India
-          (currently in <b className="text-neutral-300">Kochi</b>).
-          Primarily work within the{" "}
-          <b className="text-neutral-300">JavaScript</b> ecosystem, constantly
-          expanding my skills by learning new technologies every day. <br />
-          <br /> Currently I'm working for{" "}
+          (currently in <b className="text-neutral-300">Kochi</b>). Primarily
+          work within the <b className="text-neutral-300">JavaScript</b>{" "}
+          ecosystem, constantly expanding my skills by learning new technologies
+          every day. <br />
+          <br /> I'm working for{" "}
           <a href="https://bytsolv.com/">
             <b className="text-neutral-300">Bytsolv</b>
-          </a>{" "} building and maintaining efficient{" "}
-          <b className="text-neutral-300">business solutions.</b>
+          </a>{" "}
+          building and maintaining efficient{" "}
+          <b className="text-neutral-300">business solutions</b> and{" "}
+          <b className="text-neutral-300">products</b>.
         </p>
       </div>
       {/* Projects List */}

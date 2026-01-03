@@ -16,32 +16,27 @@ import safin from "../assets/ss/saf.png";
 import tailTale from "../assets/ss/tt.png";
 import nss from "../assets/ss/nss.png";
 import jeem from "../assets/ss/jeem.png";
+import ork from "../assets/ss/ork.png";
+import menuat from "../assets/ss/menuat.png";
 import { SkillsListItemProps } from "../components/skills-list/SkillsList";
 
 export const portfolioProjectsList: ProjectListItemProps[] = [
   {
+    title: "Ork (From Bytsolv)",
+    description:
+      "A simple, elegant journaling app designed to help you reflect, grow, and stay mindful.",
+    link: "https://ork.so/",
+  },
+  {
+    title: "TinkerSpace #Wrapped2025",
+    description:
+      "Community members' Activities & Events attended and hosted in the past year summarised",
+    link: "https://space-wrapped.vercel.app/",
+  },
+  {
     title: "ചോറുള്ളപള്ളി.in",
-    description:
-      "Find Masjids/Mahals that provide Iftar",
+    description: "Find Masjids/Mahals that provide Iftar",
     link: "https://chorullapalli.in/",
-  },
-  {
-    title: "LoVerse - Generate Rhyming Love Poems",
-    description:
-      "AI powered poem writing and export as image: Webapp for Valentines day",
-    link: "https://love-verse-cl3.pages.dev/",
-  },
-  {
-    title: "Be My Valentine ?",
-    description:
-      "Ask out your crush on Valentine's Day: They can't say no!",
-    link: "https://bemyvalentine-delta.vercel.app/",
-  },
-  {
-    title: "FMS - College ERP (Discontinued)",
-    description:
-      "A custom digital platform from inception to automate office and departmental processes.",
-    link: "https://docs.google.com/document/d/1spmfMg1FMQHuuhR9Eg9rZo3UyUI0_pj4OXZj1mNnARw/edit?usp=sharing",
   },
   {
     title: "Explore More",
@@ -64,6 +59,22 @@ export const careerAssetList: {
       },
       subtitle: "Jeem OS",
       image: jeem,
+    },
+    {
+      link: {
+        href: "https://ork.so/",
+        external: true,
+      },
+      subtitle: "Ork: Life Logged",
+      image: ork,
+    },
+    {
+      link: {
+        href: "https://menuu.at/",
+        external: true,
+      },
+      subtitle: "Menuu.at",
+      image: menuat,
     },
   ],
   itEngineer: [
@@ -251,8 +262,16 @@ export const skillsList: SkillsListItemProps[] = [
     className: "bg-blue-500",
   },
   {
+    name: "Redis",
+    className: "bg-red-500 text-white",
+  },
+  {
     name: "AWS EC2",
     className: "bg-orange-500",
+  },
+  {
+    name: "Drizzle ORM",
+    className: "bg-purple-800 text-white",
   },
   {
     name: "Odoo ERP",
@@ -272,14 +291,34 @@ export const skillsList: SkillsListItemProps[] = [
   },
   {
     name: "ERPNext",
-    className: "bg-blue-500 text-white"
+    className: "bg-blue-500 text-white",
   },
   {
     name: "Frappe",
     className: "bg-white",
   },
   {
+    name: "MariaDB",
+    className: "bg-orange-500 text-white",
+  },
+  {
+    name: "PostgreSQL",
+    className: "bg-blue-500 text-white",
+  },
+  {
     name: "Tanstack: Router, Query, Table",
     className: "bg-red-500 text-white",
   },
+  {
+    name: "Hono",
+    className: "bg-orange-500 text-white",
+  },
+  {
+    name: "Vibe Coding",
+    className: "bg-purple-500 text-white",
+  },
 ];
+
+export const LINKEDIN_URL = "https://www.linkedin.com/in/abdulsamadmj/";
+export const GITHUB_URL = "https://github.com/abdulsamadmj";
+export const TINKERHUB_URL = "https://tinkerhub.org/@abdulsamadmj";

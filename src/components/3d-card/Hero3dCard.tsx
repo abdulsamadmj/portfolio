@@ -1,6 +1,7 @@
 import { CardBody, CardContainer, CardItem } from "../../utils/ui/3d-card";
 import image from "../../assets/images/dp.jpg";
 import { FlipWords } from "../../utils/ui/flip-words";
+import { GITHUB_URL, LINKEDIN_URL } from "../../utils/Constants";
 
 export function HeroThreeDCard() {
   const words = ["Software Engineer, Bytsolv", "Continuous Learning"];
@@ -55,10 +56,7 @@ export function HeroThreeDCard() {
                 <ul className="flex gap-2">
                   <li>
                     {/* linkedIn */}
-                    <a
-                      target="_blank"
-                      href="https://www.linkedin.com/in/abdul-samad-m-j-9b8ba1187/"
-                    >
+                    <a target="_blank" href={LINKEDIN_URL}>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="16"
@@ -73,7 +71,7 @@ export function HeroThreeDCard() {
                   </li>
                   <li>
                     {/* github */}
-                    <a target="_blank" href="https://github.com/abdulsamadmj">
+                    <a target="_blank" href={GITHUB_URL}>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="16"

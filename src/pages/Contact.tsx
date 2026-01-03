@@ -1,5 +1,6 @@
 import { IconExternalLink } from "@tabler/icons-react";
 import { Link } from "react-router-dom";
+import { LINKEDIN_URL } from "../utils/Constants";
 
 function Contact() {
   return (
@@ -25,7 +26,7 @@ function Contact() {
           <div className="flex gap-2 items-center">
             <Link
               className="bg-blue-500 p-2 px-4 rounded-xl flex items-center gap-1 w-fit"
-              to={"https://www.linkedin.com/in/abdul-samad-m-j-9b8ba1187/"}
+              to={LINKEDIN_URL}
               target="_blank"
             >
               <b className="text-white">LinkedIn</b>

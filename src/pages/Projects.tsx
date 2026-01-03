@@ -10,7 +10,8 @@ import todoImage from "../assets/ss/todo.png";
 import nfImage from "../assets/ss/nf.png";
 import mzCalcImage from "../assets/ss/mz-calc.png";
 import bmvImage from "../assets/ss/bmv.png";
-import chImage from "../assets/ss/ch.jpg"
+import chImage from "../assets/ss/ch.jpg";
+import spcwrp from "../assets/ss/spc-wrp.png";
 
 import {
   IconSchool,
@@ -113,9 +114,30 @@ function Projects() {
 
   const communityProjects: BentoGridItemProps[] = [
     {
+      title: "TinkerSpace #Wrapped2025",
+      description:
+        "Community members' Activities & Events attended and hosted in the past year summarised",
+      header: <Skeleton image={spcwrp} />,
+      icon: <img src="/th.png" className="h-4 w-4" />,
+      endIcons: (
+        <div className="text-neutral-500 text-xs font-normal flex gap-1 hover:underline">
+          <a href="https://space-wrapped.vercel.app/" target="_blank">
+            <IconWorldWww className="h-4 w-4 text-neutral-500" />
+          </a>
+        </div>
+      ),
+    },
+    {
       title: "ചോറുള്ളപള്ളി.in",
-      description: "Find Masjids/Mahals that provide Iftar",
-      header: <Skeleton image={chImage}/>,
+      description: (
+        <div className="text-xs font-normal">
+          Find Masjids/Mahals that provide Iftar
+          <div className="bg-blue-500 text-white rounded-xl w-fit px-2 inline-flex">
+            Got Viral 📈
+          </div>
+        </div>
+      ),
+      header: <Skeleton image={chImage} />,
       icon: <IconBuildingMosque className="h-4 w-4 text-neutral-500" />,
       endIcons: (
         <div className="text-neutral-500 text-xs font-normal flex gap-1 hover:underline">
