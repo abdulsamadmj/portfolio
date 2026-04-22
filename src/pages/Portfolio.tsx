@@ -167,9 +167,10 @@ function Portfolio() {
           <a href="https://bytsolv.com/">
             <b className="text-neutral-300">Bytsolv</b>
           </a>{" "}
-          building and maintaining efficient{" "}
-          <b className="text-neutral-300">business solutions</b> and{" "}
-          <b className="text-neutral-300">products</b>.
+          building{" "}
+          <a href="https://ork.so/">
+            <b className="text-neutral-300">Ork.so</b>
+          </a>
         </p>
       </div>
       {/* Projects List */}
