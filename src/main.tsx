@@ -11,11 +11,13 @@ import TobNavbar from "./components/navbar/TobNavbar.tsx";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <div className="h-lvh w-full bg-black bg-dot-white/[0.2] relative flex items-center justify-center">
+    <div className="relative min-h-lvh w-full">
+      {/* Dotted backdrop, fixed so it never takes part in content paint */}
+      <div className="fixed inset-0 z-0 bg-black bg-dot-white/[0.2]"></div>
+      {/* Radial gradient to give a faded look */}
+      <div className="fixed inset-0 z-0 pointer-events-none bg-black [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
       <TobNavbar />
-      {/* Radial gradient for the container to give a faded look */}
-      <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-black [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] h-full"></div>
-      <div className="text-4xl sm:text-7xl font-bold relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 overflow-y-scroll scrollbar-thin h-screen w-screen">
+      <div className="relative z-10">
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<App />} />

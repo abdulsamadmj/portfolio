@@ -3,7 +3,7 @@ import { GITHUB_URL, LINKEDIN_URL, TINKERHUB_URL } from "../../utils/Constants";
 
 function TobNavbar() {
   return (
-    <div className="absolute top-0 text-gray-400 z-30 text-xl w-full p-5 backdrop-filter backdrop-blur-sm bg-opacity-80 bg-black flex justify-center">
+    <div className="fixed top-0 text-gray-400 z-30 text-xl w-full p-5 backdrop-filter backdrop-blur-sm bg-opacity-80 bg-black flex justify-center">
       <div className="max-w-screen-lg w-full flex justify-between">
         samad.
         <div className="flex gap-2 items-center">
