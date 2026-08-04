@@ -12,6 +12,7 @@ import mzCalcImage from "../assets/ss/mz-calc.png";
 import bmvImage from "../assets/ss/bmv.png";
 import chImage from "../assets/ss/ch.jpg";
 import spcwrp from "../assets/ss/spc-wrp.png";
+import qsenseImage from "../assets/ss/qsense.png"
 
 import {
   IconSchool,
@@ -31,6 +32,7 @@ import {
   IconBrandNetflix,
   IconKey,
   IconBuildingMosque,
+  IconBuildingFactory,
 } from "@tabler/icons-react";
 import { BentoGridItemProps } from "../utils/ui/bento-grid";
 
@@ -46,6 +48,18 @@ function Projects() {
   );
 
   const coreProjects: BentoGridItemProps[] = [
+    {
+      title: "Qsense - Factory AI on Snapdragon",
+      description:
+        "Edge AI-powered industrial safety and predictive maintenance system built for MSME manufacturing environments.",
+      header: <Skeleton image={qsenseImage} />,
+      icon: <IconBuildingFactory className="h-4 w-4 text-neutral-500" />,
+      endIcons: (
+        <a href="https://github.com/abdulsamadmj/tail-tale" target="_blank">
+          <IconBrandGithub className="h-4 w-4 text-neutral-500" />
+        </a>
+      ),
+    },
     {
       title: "FMS - College ERP",
       description:

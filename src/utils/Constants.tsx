@@ -22,6 +22,11 @@ import { SkillsListItemProps } from "../components/skills-list/SkillsList";
 
 export const portfolioProjectsList: ProjectListItemProps[] = [
   {
+    title: "QSense (Snapdragon Hackathon Winner)",
+    description: "Edge AI-powered industrial safety and predictive maintenance system built for MSME manufacturing environments.",
+    link: "https://github.com/VibeCheck-Q/QSense-Web"
+  },
+  {
     title: "Ork (From Bytsolv)",
     description:
       "A simple, elegant journaling app designed to help you reflect, grow, and stay mindful.",
