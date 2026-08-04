@@ -331,6 +331,22 @@ export const skillsList: SkillsListItemProps[] = [
     name: "Vibe Coding",
     className: "bg-purple-500 text-white",
   },
+  {
+    name: "Cloudflare",
+    className: "bg-orange-500 text-black"
+  },
+  {
+    name: "Django",
+    className: "bg-blue-500 text-yellow-300"
+  },
+  {
+    name: "Expo (React Native)",
+    className: "bg-gray-500 text-white"
+  },
+  {
+    name: "Three.JS",
+    className: "bg-white text-black"
+  }
 ];
 
 export const LINKEDIN_URL = "https://www.linkedin.com/in/abdulsamadmj/";
