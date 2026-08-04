@@ -18,6 +18,7 @@ import nss from "../assets/ss/nss.png";
 import jeem from "../assets/ss/jeem.png";
 import ork from "../assets/ss/ork.png";
 import menuat from "../assets/ss/menuat.png";
+import carssat from "../assets/ss/carss.png";
 import { SkillsListItemProps } from "../components/skills-list/SkillsList";
 
 export const portfolioProjectsList: ProjectListItemProps[] = [
@@ -59,11 +60,11 @@ export const careerAssetList: {
   softwareEngineer: [
     {
       link: {
-        href: "https://jeem.so/",
+        href: "https://carss.at/",
         external: true,
       },
-      subtitle: "Jeem OS",
-      image: jeem,
+      subtitle: "Carss.at",
+      image: carssat,
     },
     {
       link: {
@@ -80,6 +81,14 @@ export const careerAssetList: {
       },
       subtitle: "Menuu.at",
       image: menuat,
+    },
+    {
+      link: {
+        href: "https://jeem.so/",
+        external: true,
+      },
+      subtitle: "Jeem OS",
+      image: jeem,
     },
   ],
   itEngineer: [
