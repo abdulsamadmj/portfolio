@@ -7,8 +7,8 @@ interface CareerGridProps {
 function CareerGrid({ list }: CareerGridProps) {
   return (
     <div className="grid grid-cols-2 gap-4">
-      {list.map((item) => (
-        <CareerGridItem {...item} />
+      {list.map((item, index) => (
+        <CareerGridItem key={index} {...item} />
       ))}
     </div>
   );
