@@ -8,6 +8,7 @@ import { Navbar } from "./components/navbar/BottomNavbar.tsx";
 import Portfolio from "./pages/Portfolio.tsx";
 import Projects from "./pages/Projects.tsx";
 import TobNavbar from "./components/navbar/TobNavbar.tsx";
+import Gaming from "./pages/Gaming.tsx";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
@@ -24,6 +25,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/connect" element={<Contact />} />
+            <Route path="/gaming" element={<Gaming />} />
           </Routes>
           <Navbar />
         </BrowserRouter>
