@@ -43,12 +43,14 @@ function Portfolio() {
             Learning, Creating and Maintaining{" "}
             <a
               className="font-bold underline inline-flex items-start"
-              href="https://jeem.so/"
+              href="https://ork.so/"
+              target="_blank"
             >
-              Jeem OS{" "}
+              Ork{" "}
               <IconExternalLink className="text-gray-600 inline" size={15} />
             </a>
-            : An AI powered suite of business apps with a wonderful team.
+            : Life Logged. A simple, elegant journaling app that helps you
+            reflect, grow and stay mindful, built with a wonderful team.
           </p>
           <CareerGrid
             key="itEngineer"
