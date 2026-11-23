@@ -27,11 +27,14 @@ function Portfolio() {
           <Link
             to="https://bytsolv.com/"
             target="_blank"
-            className="underline underline-offset-4 decoration-gray-800 hover:text-neutral-300"
+            className="group underline underline-offset-4 decoration-gray-800 hover:text-neutral-300"
           >
             <div className="flex items-center gap-1">
               Bytsolv
-              <IconExternalLink className="text-gray-600" />
+              <IconExternalLink
+                size="1em"
+                className="text-gray-600 group-hover:text-neutral-300"
+              />
             </div>
           </Link>
           December 2024 - Present
@@ -66,11 +69,14 @@ function Portfolio() {
           <Link
             to="https://jkskarate.com/"
             target="_blank"
-            className="underline underline-offset-4 decoration-gray-800 hover:text-neutral-300"
+            className="group underline underline-offset-4 decoration-gray-800 hover:text-neutral-300"
           >
             <div className="flex items-center gap-1">
               JKS Academy
-              <IconExternalLink className="text-gray-600" />
+              <IconExternalLink
+                size="1em"
+                className="text-gray-600 group-hover:text-neutral-300"
+              />
             </div>
           </Link>
           September 2023 - August 2024
@@ -95,11 +101,14 @@ function Portfolio() {
           <Link
             to="https://dev-jsx.github.io/"
             target="_blank"
-            className="underline underline-offset-4 decoration-gray-800 hover:text-neutral-300"
+            className="group underline underline-offset-4 decoration-gray-800 hover:text-neutral-300"
           >
             <div className="flex items-center gap-1">
               DJX (Freelance)
-              <IconExternalLink className="text-gray-600" />
+              <IconExternalLink
+                size="1em"
+                className="text-gray-600 group-hover:text-neutral-300"
+              />
             </div>
           </Link>
           June 2022 - July 2023
