@@ -9,6 +9,9 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
+  "engines": {
+    "node": "26.x"
+  },
   "dependencies": {
     "@tabler/icons-react": "^3.14.0",
     "clsx": "^2.1.1",
